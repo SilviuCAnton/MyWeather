@@ -1,0 +1,170 @@
+﻿<Page
+    x:Class="MyWeather.Meniu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWeather"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="SandwitchButtonStyle">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+        </Style>
+    </Page.Resources>
+
+    
+
+    <Grid Name="GridMare" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <MediaElement Source="Assets/Sunete/Muzica_fundal.mp3"
+                      AutoPlay="True"
+                      IsLooping="True"
+                      Name="myMediaPlayer"/>
+
+        <RelativePanel>
+            <Button Style="{StaticResource SandwitchButtonStyle}"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    Name="ButonPrincipal"
+                    Content="&#xE700;"
+                    Click="ButonPrincipal_Click"/>
+
+            <TextBlock Name="TextMenu"
+                       Height="40"
+                       FontWeight="Bold"
+                       Margin="20 0 0 0" Text=""
+                       RelativePanel.RightOf="ButonPrincipal"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       FontSize="28"/>
+
+            <Button Name="ButonMuzica"
+                    Height="40"
+                    Width="150"
+                    Margin="0,0,2,0"
+                    Content="Opreste muzica"
+                    RelativePanel.LeftOf="ButonTema"
+                    Click="ButonMuzica_Click"/>
+
+            <Button Width="150"
+                    Height="40"
+                    Name="ButonTema"
+                    Content="Tema Noapte"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignHorizontalCenterWith="ButonPrincipal"
+                    Click="ButonTema_Click"/>
+
+        </RelativePanel>
+
+        <SplitView OpenPaneLength="220" CompactPaneLength="50" DisplayMode="CompactOverlay" Grid.Row="1" Name="MySplitView">
+            <SplitView.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid x:Name="Grid_Frame_butoane">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="8*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Name="MyFrame" Grid.Row="1" Grid.ColumnSpan="2" Navigated="MyFrame_Navigated"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                            <TextBlock Name="Bulina1" FontFamily="Segoe MDL2 Assets" FontSize="12" Text="&#xE91F;" Margin="0,0,15,0" Foreground="#EAEAEA" />
+
+                            <TextBlock Name="Bulina2" FontFamily="Segoe MDL2 Assets" FontSize="12" Text="&#xE91F;" Margin="0,0,15,0" Foreground="#EAEAEA"/>
+
+                            <TextBlock Name="Bulina3" FontFamily="Segoe MDL2 Assets" FontSize="12" Text="&#xE91F;" Margin="0,0,15,0" Foreground="#EAEAEA"/>
+
+                            <TextBlock Name="Bulina4" FontFamily="Segoe MDL2 Assets" FontSize="12" Text="&#xE91F;" Margin="0,0,15,0" Foreground="#EAEAEA"/>
+
+                            <TextBlock Name="Bulina5" FontFamily="Segoe MDL2 Assets" FontSize="12" Text="&#xE91F;" Margin="0,0,15,0" Foreground="#EAEAEA"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                            <Button Name="ButonNavigareInapoi"
+                                    FontFamily="Segoe MDL2 Assets"
+                                    FontSize="24"
+                                    Width="40"
+                                    Height="40"
+                                    Background="Transparent"
+                                    Content="&#xE973;"
+                                    Foreground="#B3B3B3"
+                                    Click="ButonNavigareInapoi_Click"/>
+
+                            <Button Name="ButonNavigareInainte"
+                                    FontFamily="Segoe MDL2 Assets"
+                                    FontSize="24"
+                                    Width="40"
+                                    Height="40"
+                                    Background="Transparent"
+                                    Content="&#xE974;"
+                                    Foreground="#B3B3B3"
+                                    Click="ButonNavigareInainte_Click"/>
+                            
+                        </StackPanel>
+
+
+                    </Grid>
+
+                    <Image Source="Assets/Imagini/Background_Vreme.png" Grid.Column="1" Stretch="UniformToFill" Opacity="0.20"/>
+                </Grid>
+            </SplitView.Content>
+
+            <SplitView.Pane>
+                <ListBox Name="ListaMeniu" SelectionMode="Single" SelectionChanged="ListaMeniu_SelectionChanged">
+                    
+                    <ListBoxItem Name="Item1" IsSelected="True">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE82F;" FontSize="24"/>
+                            <TextBlock FontSize="16" Text="Ce e cu vremea" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    
+                    <ListBoxItem Name="Item2">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEB50;" FontSize="24"/>
+                            <TextBlock FontSize="16" Text="Care e soulutia" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Item3">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE774;" FontSize="24"/>
+                            <TextBlock FontSize="16" Text="Despre noi si clima" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Item4">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE76E;" FontSize="24"/>
+                            <TextBlock FontSize="16" Text="Cum sa fiu bine" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Exit">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE7E8;" FontSize="24"/>
+                            <TextBlock FontSize="16" Text="Inchide aplicatia" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+</Page>
