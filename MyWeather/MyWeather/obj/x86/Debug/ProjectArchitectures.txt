@@ -1,0 +1,1 @@
+F:\Proiecte Visual Studio\MyWeather\MyWeather\MyWeather.csproj;x86
