@@ -1,0 +1,121 @@
+﻿<Page
+    x:Class="MyWeather.Pagini.S2_P1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWeather.Pagini"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="5.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="O problema si solutia ei"
+                   Grid.Column="1"
+                   Foreground="#B3B3B3"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontWeight="Bold"/>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   Foreground="#75245E"
+                   FontSize="16"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            Asta e cu vremea! Intre retragerea unui front atmosferic si apropierea celuilalt, asupra ta  <LineBreak/>
+            actioneaza – intr-o perioada scurta de timp, o multime de influente meteorologice. Iata:
+        </TextBlock>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+
+            <Image Source="../Assets/Imagini/instrumente_meteoBIS.png"/>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+
+                    <TextBlock x:ConnectionId='5' Name="Bulina1"
+                               Text="&#xE91F;" 
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe MDL2 Assets"
+                               Foreground="Black"
+                               FontSize="10"
+                                                                      />
+
+                    <Image Source="../Assets/Imagini/click_aici1.png"
+                           Height="40"
+                           Width="120"/>
+
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+
+                    <TextBlock x:ConnectionId='4' Name="Bulina2"
+                               Text="&#xE91F;" 
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe MDL2 Assets"
+                               Foreground="Black"
+                               FontSize="10"
+                                                                      />
+
+                    <Image Source="../Assets/Imagini/click_aici1.png"
+                           Height="40"
+                           Width="120"/>
+                    
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+
+                    <TextBlock x:ConnectionId='3' Name="Bulina3"
+                               Text="&#xE91F;" 
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe MDL2 Assets"
+                               Foreground="Black"
+                               FontSize="10"
+                                                                      />
+
+                    <Image Source="../Assets/Imagini/click_aici1.png"
+                           Height="40"
+                           Width="120"/>
+                    
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+        <Border Background="Black" Opacity="0.5" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <TextBlock x:ConnectionId='1' Name="TextBlockSubtitlu"
+                   Foreground="White"
+                   TextAlignment="Left"
+                   Margin="10,0,0,0"
+                   FontWeight="SemiBold"
+                   FontSize="18"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="3"/>
+
+        <TextBlock x:ConnectionId='2' Name="TextBlockDescriere"
+                   Foreground="White"
+                   FontSize="16"
+                   TextAlignment="Left"
+                   Margin="10,0,0,0"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="4"/>
+    </Grid>
+</Page>
+

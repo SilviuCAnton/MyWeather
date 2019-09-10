@@ -1,0 +1,120 @@
+﻿<Page
+    x:Class="MyWeather.S1_P5"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWeather"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Hai sa aflam ce e cu vremea"
+                   Grid.Column="1"
+                   Foreground="#B3B3B3"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontWeight="Bold"/>
+
+        <TextBlock Text="Bun. Acum, identifica ce tip de om esti, dupa cum te influenteaza conditiile meteo:"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Foreground="#75245E"
+                   FontSize="16"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="2"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center">
+
+            <RadioButton x:ConnectionId='3' Name="ButonRadio1"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    Nu am niciun fel de dificultate cu schimbarile bruste de <LineBreak/>
+                    vreme si ma acomodez usor cu orice fluctuatii.
+                </TextBlock>
+
+            </RadioButton>
+
+            <RadioButton x:ConnectionId='4' Name="ButonRadio2"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    Modificarile atmosferice se repercuteaza direct asupra <LineBreak/>
+                    echilibrului psihic si a starii de sanatate, reactionez cu <LineBreak/>
+                    irascibilitate, dureri de cap, indispozitii si tendinte depresive.
+                </TextBlock>
+
+            </RadioButton>
+
+            <RadioButton x:ConnectionId='5' Name="ButonRadio3"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    Presimt modificarea vremii chiar si cu 48 de ore in avans, <LineBreak/>
+                    de pilda sub forma durerilor aparute intr-o cicatrice.
+                </TextBlock>
+
+            </RadioButton>
+
+            <RadioButton x:ConnectionId='6' Name="ButonRadio4"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    La schimbari bruste de vreme imi sunt activate boli deja existente,  <LineBreak/>
+                    ca reumatismul sau dereglarile sistemului neurovegetativ.
+                </TextBlock>
+
+            </RadioButton>
+
+        </StackPanel>
+
+        <Button x:ConnectionId='1' Name="ButonTrimiteAlegeri"
+                Height="50"
+                Width="200"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Trimite alegerile"
+                FontWeight="Bold"
+                FontSize="16"
+                Background="Transparent"
+                BorderBrush="Black"
+                Grid.Row="3"
+                Grid.Column="1"
+                                                 />
+
+        <TextBlock x:ConnectionId='2' Name="TextBlockRezultat"
+                   Foreground="#75245E"
+                   FontSize="16"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text=""/>
+    </Grid>
+</Page>
+

@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="MyWeather.Pagini.S2_P2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWeather.Pagini"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="11.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="O problema si solutia ei"
+                   Grid.Column="1"
+                   Foreground="#B3B3B3"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontWeight="Bold"/>
+
+        <TextBlock x:ConnectionId='1' Name="TexblockIntampinare"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Foreground="#75245E"
+                   FontSize="16"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="2"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center">
+
+            <CheckBox x:ConnectionId='4' Name="Checkbox1"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    Vremea calduroasa ma binedispune. 
+                </TextBlock>
+
+            </CheckBox>
+
+            <CheckBox x:ConnectionId='5' Name="Checkbox2"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    Ploaia se rasfrange negativ si imi provoaca indispozitie.
+                </TextBlock>
+
+            </CheckBox>
+
+            <CheckBox x:ConnectionId='6' Name="Checkbox3"
+                         IsChecked="False"
+                         Margin="0,0,0,4">
+
+                <TextBlock Foreground="#75245E"
+                           VerticalAlignment="Center">
+                    Micsorarea intervalului intre zi si noapte imi poate da  <LineBreak/>
+                    oboseala acuta, astenie fizica si psihica, stare de <LineBreak/>
+                    somnolenta continua si chiar depresie.
+                </TextBlock>
+
+            </CheckBox>
+
+        </StackPanel>
+
+        <Button x:ConnectionId='2' Name="ButonTrimiteAlegeri"
+                Height="50"
+                Width="200"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Trimite alegerile"
+                FontWeight="Bold"
+                FontSize="16"
+                Background="Transparent"
+                BorderBrush="Black"
+                Grid.Row="3"
+                Grid.Column="1"
+                                                 />
+
+        <TextBlock x:ConnectionId='3' Name="TextBlockRezultat"
+                   Foreground="#14c515"
+                   Visibility="Collapsed"
+                   FontSize="16"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text="">
+            Potrivit psihologilor, schimbarile de clima, diferentele bruste de temperatura si deviatiile de presiune<LineBreak/>
+            atmosferica pot influenta energia care circula prin corpul nostru. Specialistii atentioneaza ca influentele<LineBreak/>
+            atmosferice se repercuteaza asupra echilibrului psihic al meteodependentilor. Cerul gri, bacovian si ceata<LineBreak/>
+            sunt surse de anxietate, deprimare si melancolie. Eruptiile solare intensifica starile depresive si cresc<LineBreak/>
+            rata tentativelor de sinucidere.
+            
+        </TextBlock>
+    </Grid>
+</Page>
+
