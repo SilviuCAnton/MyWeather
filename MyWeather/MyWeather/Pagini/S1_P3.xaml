@@ -1,0 +1,146 @@
+﻿<Page
+    x:Class="MyWeather.S1_P3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWeather"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Hai sa aflam ce e cu vremea"
+                   Grid.Column="1"
+                   Foreground="#B3B3B3"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontWeight="Bold"/>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   Foreground="#75245E"
+                   FontSize="16"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            Stiai ca uneori felul in care te simti poate fi influentat si de vreme? Alege ce tipuri de <LineBreak/>
+            actiune poate avea vremea asupra organismului tau:
+        </TextBlock>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="CheckBox1"
+                      IsChecked="False"
+                      Margin="0,0,0,5"
+                      VerticalContentAlignment="Top">
+
+                    <TextBlock Text="optima"
+                           Foreground="#75245E"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,5"/>
+
+                </CheckBox>
+
+                <Image Name="ImagineFeedback1"
+                       Width="16"
+                       Height="16"
+                       HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="CheckBox2"
+                      IsChecked="False"
+                      Margin="0,0,0,5"
+                      VerticalContentAlignment="Top">
+
+                    <TextBlock Text="excitanta"
+                           Foreground="#75245E"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,5"/>
+
+                </CheckBox>
+
+                <Image Name="ImagineFeedback2"
+                       Width="16"
+                       Height="16"
+                       HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="CheckBox3"
+                      IsChecked="False"
+                      Margin="0,0,0,5"
+                      VerticalContentAlignment="Top">
+
+                    <TextBlock Text="acuta"
+                           Foreground="#75245E"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,5"/>
+
+                </CheckBox>
+
+                <Image Name="ImagineFeedback3"
+                       Width="16"
+                       Height="16"
+                       HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="CheckBox4"
+                      IsChecked="False"
+                      Margin="0,0,0,5"
+                      VerticalContentAlignment="Top">
+
+                    <TextBlock Text="cronica"
+                           Foreground="#75245E"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,5"/>
+
+                </CheckBox>
+
+                <Image Name="ImagineFeedback4"
+                       Width="12"
+                       Height="12"
+                       HorizontalAlignment="Center"/>
+            </StackPanel>
+            
+        </StackPanel>
+
+        <TextBlock Name="TextBlockFeedback"
+                   FontSize="16"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text=""/>
+
+        <Button Name="ButonTrimiteAlegeri"
+                Height="50"
+                Width="200"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Trimite alegerile"
+                FontWeight="Bold"
+                FontSize="16"
+                Background="Transparent"
+                BorderBrush="Black"
+                Grid.Row="3"
+                Grid.Column="1"
+                Click="ButonTrimiteAlegeri_Click"/>
+    </Grid>
+</Page>

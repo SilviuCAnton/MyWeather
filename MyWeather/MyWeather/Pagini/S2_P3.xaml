@@ -1,0 +1,122 @@
+﻿<Page
+    x:Class="MyWeather.Pagini.S2_P3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyWeather.Pagini"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="O problema si solutia ei"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="4"
+                   Foreground="#B3B3B3"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontWeight="Bold"/>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="4"
+                   Foreground="#75245E"
+                   FontSize="16"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            E clar pentru tine cum schimbarile de vreme te pot afecta? Afla solutii ca sa eviti asta:   <LineBreak/>
+            fa sport, consuma ceaiuri relaxante, vitamine si minerale.
+        </TextBlock>
+
+        <Image Name="ImagineFundal"
+               Source="../Assets/Imagini/fitnessjog.jpg"
+               Grid.Row="2"
+               Grid.ColumnSpan="4"
+               Grid.RowSpan="4"
+               Stretch="Fill"/>
+
+        <Border Background="Black" Opacity="0.5" Grid.ColumnSpan="4" Grid.Row="5"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center">
+
+            <TextBlock Name="Bulina1"
+                       Text="&#xE91F;" 
+                       VerticalAlignment="Center"
+                       FontFamily="Segoe MDL2 Assets"
+                       Foreground="WhiteSmoke"
+                       Margin="10,0,10,0"
+                       FontSize="10"
+                       PointerPressed="Bulina1_PointerPressed"/>
+
+            <TextBlock Name="Bulina2"
+                       Text="&#xE91F;" 
+                       VerticalAlignment="Center"
+                       FontFamily="Segoe MDL2 Assets"
+                       Foreground="WhiteSmoke"
+                       Margin="10,0,10,0"
+                       FontSize="10"
+                       PointerPressed="Bulina2_PointerPressed"/>
+
+            <TextBlock Name="Bulina3"
+                       Text="&#xE91F;" 
+                       VerticalAlignment="Center"
+                       FontFamily="Segoe MDL2 Assets"
+                       Foreground="WhiteSmoke"
+                       Margin="10,0,10,0"
+                       FontSize="10"
+                       PointerPressed="Bulina3_PointerPressed"/>
+
+        </StackPanel>
+
+        <TextBlock Foreground="White"
+                   FontSize="16"
+                   TextAlignment="Left"
+                   Grid.ColumnSpan="4"
+                   Grid.Row="5"
+                   Margin="10,0,0,0">
+            Sportul iti pastreaza organismul in forma, il fortifiaza si-l face mai apt sa se confrunte cu schimbarile vremii. Petrece mai mult<LineBreak/>
+            timp in natura si vei vedea ca schimbarile vremii nu te vor mai afecta la fel de tare. Stii si tu ca persoanele care locuiesc la tara<LineBreak/>
+            sunt mai sanatoase si mai puternice. Poate ca viata la oras, petrecuta mai mereu in interior (acasa, la munca, la scoala) te<LineBreak/>
+            predispune la aceste sensibilitati. Ceaiurile relaxante pot fi consumate zilnic, mai ales seara. Pentru ca te ajuta sa te odihnesti<LineBreak/>
+            mai bine.
+        </TextBlock>
+
+        <Image Source="../Assets/Imagini/click_aici4.png"
+               Height="30"
+               Width="90"
+               HorizontalAlignment="Right"
+               Grid.Column="1"
+               Grid.Row="3"/>
+
+        <Image Source="../Assets/Imagini/click_aici3.png"
+               Height="40"
+               Width="120"
+               VerticalAlignment="Top"
+               Grid.Column="2"
+               Grid.Row="4"/>
+
+        <Image Source="../Assets/Imagini/click_aici5.png"
+               Height="30"
+               Width="90"
+               HorizontalAlignment="Left"
+               Grid.Column="3"
+               Grid.Row="3"/>
+    </Grid>
+</Page>
