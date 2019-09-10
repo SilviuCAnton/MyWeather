@@ -1,0 +1,38 @@
+CULORI PROIECT ATESTAT
+
+		R	G	B				HEXA
+
+MOV INCHIS	117	36	94				75245E
+MOV DESCHIS	149	70	127				95467F
+
+BLEU INTENTS	0	203	228				00CBE4			
+
+GRI INTENS	179	179	179				B3B3B3		
+GRI PAL		234	234	234				EAEAEA	
+
+PORTOCALIU	242	160	36				F2A024		
+GALBEN		255	187	0				FFBB00
+
+VERDE INCHIS	74	140	15				4A8C0F          ROSU COMPLEMENTAR    157    55    17     9D3711
+VERDE DESCHIS	95	179	12				5FB30C          ROSU COMPLEMENTAR    139    15    55     8B0F37
+
+
+CODURI SIMBOLURI:
+
+bec - E82F		ToolTip
+bec bifa - EB50		Reminder
+glob - E774		Globe
+fata vesela - E76E	Emoji2
+inchide - E7E8		PowerButton
+left arrow - E973	ChevronLeftMed
+right arrow - E974	ChevronRightMed
+
+checkbox - F16B		Checkbox14
+checkbox bifa - F16C	CheckboxComposite14
+
+INSTRUMENTE UTILE:
+
+Crop foto (16:9, automat) - https://croppola.com/
+Aspect foto - https://calculateaspectratio.com/
+Convertor cod culoare - http://www.javascripter.net/faq/rgbtohex.htm11	
+Coduri simboluri (Set Segoe) - https://docs.microsoft.com/en-us/windows/uwp/design/style/segoe-ui-symbol-font
